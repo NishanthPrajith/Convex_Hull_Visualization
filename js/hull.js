@@ -136,7 +136,8 @@ async function quickhull(a, x, y, convex, orient, text, temp, dict, g, checker) 
     console.log("----------------------");
     quickhull(points, x, highestPoint, convex, orient, text, temp, dict, g, true);
     temp.push(highestPoint);
-    temp.push(y);    quickhull(points, highestPoint, y, convex, orient, text, temp, dict, g, true);
+    temp.push(y);    
+    quickhull(points, highestPoint, y, convex, orient, text, temp, dict, g, true);
 }
 
 function generateString() {
@@ -170,7 +171,7 @@ async function qHull() {
     quickhull(points, minimumX, maximumX, convex, 1, text, temp, dict, alldata, true);
     await sleep(3000);
     quickhull(points, minimumX, maximumX, convex, -1, text, temp, dict, alldata, false);
-    await sleep(5000);
+    await sleep(3500);
     finalDraw(text, alldata, temp, dict);
     show();
 

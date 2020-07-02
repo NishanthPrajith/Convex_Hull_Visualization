@@ -71,6 +71,20 @@ function segmentDistance(a, b, c) {
     return res;
 }
 
+function finalDraw(text, s, t, dict) {
+    for(var i = 0; i < s.length; i++) {
+        var r = Math.floor(s[i][0] + s[i + 1][0]);
+        dict[r] = generateString();
+        text = text + "<div id='" + dict[r] + "'><svg  width='1800' height='1000' style='position: absolute'><line x1='" + (s[i][0] + 2)+ "' y1='" + (s[i][1] + 2) + "' x2='" + (s[i + 1][0] + 2) + "' y2='" + (s[i + 1][1] + 2) + "' stroke='green'/></svg></div>";
+        i = i + 1;
+    }
+    document.getElementById("main").innerHTML = text;
+    for (var i = 0; i < t.length; i = i + 2) {
+        var r = Math.floor(t[i][0] + t[i + 1][0]);
+        document.getElementById(dict[r]).style.display = "none";
+    }
+}
+
 function draw(text, s, t, dict) {
     for(var i = 0; i < s.length; i++) {
         var r = Math.floor(s[i][0] + s[i + 1][0]);
@@ -156,7 +170,8 @@ async function qHull() {
     quickhull(points, minimumX, maximumX, convex, 1, text, temp, dict, alldata, true);
     await sleep(3000);
     quickhull(points, minimumX, maximumX, convex, -1, text, temp, dict, alldata, false);
-    await sleep(3000);
+    await sleep(5000);
+    finalDraw(text, alldata, temp, dict);
     show();
 
 }

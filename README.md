@@ -1,4 +1,2 @@
 # Convex_Hull_Visualization
----
-permalink: /index.html
----
+A simple convex hull alogrithm visualization

@@ -5,7 +5,10 @@ A simple visualization I made to showcase different convex hull algorithms such 
 ## Usage
 Just to make sure the controls is as simple as possible, all you as the user needs to do is click on the algorithm from the list at the top and let the javascript do the rest of the work. Once clicked the algorithm will begin executing. And only once the current execution is finished you the user will be allowed to choosen a different algorithm.   
 
-**Please note that the time it takes for the visualization is in no way representative of the speed of the alogrithm as this has been slowed down to create a more appealing affect.**
+**Please note that the time it takes for the visualization is in no way representative of the speed of the alogrithm as this has been slowed down to create a more appealing affect.**  
+
+![instructions](https://user-images.githubusercontent.com/44118659/86421008-58e1af80-bca6-11ea-9d33-28f831034b05.gif)  
+
 
 
 ## Algorithms Used
@@ -25,3 +28,5 @@ Note that the time complexitiy of each alogithms is based on the number of input
 > Time Complexity : O(nlogn)  
 >  
 > This alogrithm works by dividing the set of inputs into smaller and smaller inputs until the convex hull of that small input is easily calculated. Once that is complete, the alogrithm goes on to find the upper and lower tangents of the two newly found convex hulls, and uses the tangents to merge the two convex hulls together creating a new convex hull. This process continues until there is no more convex hull left to be merged.
+
+###### *by Nishanth Prajith*

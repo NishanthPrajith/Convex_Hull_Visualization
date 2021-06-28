@@ -1,6 +1,6 @@
 # Convex Hull Visualization
 A simple visualization I made to showcase different convex hull algorithms such as graham scan, quick hull and divide & conquer.  
-link : https://nishanthprajith18.github.io/Convex_Hull_Visualization/
+link : https://nishanthprajith.github.io/Convex_Hull_Visualization/
 
 
 ## Usage
